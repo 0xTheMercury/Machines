@@ -56,6 +56,7 @@
     * I used this command `cp /bin/bash /tmp/bash && chmod u+s /tmp/bash`
     * Then save and run this task from the service, After that you'll find the the terminal inside you `/tmp` directory.
     * Just execute it and you'll get root terminal.
+
 ![alt text](Pics/Screenshot_2025-08-21_13-12-08.png)
 ![alt text](Pics/Screenshot_2025-08-21_13-06-37.png)
   * BOOOOM, We got flag.txt (Root Flag).
