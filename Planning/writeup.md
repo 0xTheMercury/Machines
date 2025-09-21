@@ -48,6 +48,7 @@
 ### Privilege Escalation To User "Root" (Root Flag)
   * When i was enumerating this machine manually, I found credentials of user called `root_grafana`, This looks user of service or something like that.
   * So i tried to look for internal service running on this machine, And i found it then forwarded the traffic to my attacker machine by this command `ssh -L <ATTACKER PORT>:127.0.0.1:<SERVICE PORT> enzo@<MACHINE IP>` to test this service.
+
 ![alt text](Pics/Screenshot_2025-08-21_12-31-43.png)
 ![alt text](Pics/Screenshot_2025-08-21_12-38-58.png)
 ![alt text](Pics/Screenshot_2025-08-21_12-39-32.png)
