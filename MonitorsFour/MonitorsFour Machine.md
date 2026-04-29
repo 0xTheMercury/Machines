@@ -23,9 +23,9 @@
 - From my small experience in web development, when i'm creating login system, I identify the user by `ID` (Identifier), I take this ID to render the profile data  in user's profile page.
 -  If `monitorsfour.htb/user?token=` doesn't have security mechanism to prevent IDOR (Insecure Direct Object Reference), i can take over another account.
 - I tried `/user?token=0` because 0 is usually admin's ID, And i got JSON object contains a lot of emails with their passwords.
-- ![[./Pics/Screenshot From 2026-04-23 12-13-56.png]]
+- ![](<./Pics/Screenshot From 2026-04-23 12-13-56.png>)
 - I put all these encrypted passwords in file to crack and got only one password.
-- ![[./Pics/Screenshot From 2026-04-24 13-49-32.png]]
+- ![](<./Pics/Screenshot From 2026-04-24 13-49-32.png>)
 - These credentials worked on `monitorsfour.htb`, but it didn't work on `cacti.monitorsfour.htb`.
 - I stucked here for sometime thinking in something else i didn't do.
 	- Is there information i didn't notice?
@@ -49,7 +49,7 @@
 3. Start my listener, Trigger the exploit by accessing the file `http://cacti.monitorsfour.htb/cacti/<FILE_NAME>`.
 4. [Automated POC](https://github.com/SoftAndoWetto/CVE-2025-24367-PoC-Cacti/blob/main/exploit.py)
 5. [Manual POC](https://medium.com/@929319519qq/cve-2025-24367-exploit-no-code-59aff124d547).
-6. ![[./Pics/Screenshot From 2026-04-26 08-58-54.png]]
+6. ![](<./Pics/Screenshot From 2026-04-26 08-58-54.png>)
 7. Get user flag `user.txt`.
 
 ## Getting root flag
@@ -61,7 +61,7 @@
 - I'm in docker container, The IP address i have is container's, I need to know the docker engine's IP to start my recon about docker.
 - I tried this command to give gateway connection `curl -v http://host.docker.internal:2375/info`, It's DNS trick to know gateway connections of docker engine because the i don't know engine's IP and the ports are filtered which is i can't scan them externally.
 - I found this IP address but the connection is refused.
-- ![[./Pics/Screenshot From 2026-04-29 03-50-15.png]]
+- ![](<./Pics/Screenshot From 2026-04-29 03-50-15.png>)
 - I spend sometime thinking util i got simple idea, If this IP is refused, maybe another one in the same range i can connect, so i used this simple bash script to scan IP's range.
 
 ```bash
